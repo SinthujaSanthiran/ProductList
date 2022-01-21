@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+<br><br><br>
+<div [align]="">
+  <table [border]="1">
+    <thead>
+      <th>ID</th>
+      <th>Productname</th>
+      <th>Brandname</th>
+      <th>Shelvenumber</th>
+      <th>AvailableQuantity</th>
+      <th>Price</th>
+      <th>Purchasedate</th>
+      
+    </thead>
+    <tr *ngFor="let product of products">
+      <td>{{ product._id }}</td>
+      <td>{{ product.productname }}</td>
+        <td>{{ product.brandname }}</td>
+        <td>{{ product.shelvenumber }}</td>
+        <td>{{ product.AvailableQuantity }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.Purchasedate}}</td>
+    </tr>
+  </table>
+  <br><br><br>
+  <ul><li *ngFor="let product of products">
+      {{product.productname}}
+  </li></ul>
+</div>

@@ -1,0 +1,24 @@
+<a routerLink="product" (click)="onClick()">Add </a>
+<app-product></app-product>
+<div class="form" style="text-align:center" >
+<label>ProductDetails</label>
+<form [formGroup]="productform" (ngSubmit)="onSubmit()" >   
+    <label >Productname</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="Productname"  formControlName="productname"/> <br>
+    <br>
+    <label>Brandname&nbsp;&nbsp;</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text"  name="Brandname"   formControlName="brandname"/><br><br>
+    <label>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="Price" formControlName="Price" /><br><br>
+    <label>Selfnumber&nbsp;&nbsp;&nbsp;</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="shelvenumber" formControlName="shelvenumber"/><br><br>
+    <label>Purchasedate &nbsp;&nbsp;</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="Date" name="Purchasedate" formControlName="Purchasedate" /><br><br>
+    <label>AvailableQuantity &nbsp;</label>&nbsp;&nbsp;
+    <input type="text" name="AvailableQuantity" formControlName="AvailableQuantity" /><br><br>
+
+    <button [disabled]="!productform.valid" (click)="save()"> submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button [disabled]="!productform.valid" > Cancel</button>
+</form>
+</div>
+
